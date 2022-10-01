@@ -1,11 +1,11 @@
 import React, { StrictMode } from 'react';
 
-const Profile = () => {
+const About = () => {
   return (
     <div>
-      <h1>Hello from Profile</h1>
+      <h1>Hello from About</h1>
     </div>
   );
 };
 
-export default Profile;
+export default About;
