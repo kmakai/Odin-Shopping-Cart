@@ -4,7 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Header from "./components/Header";
 
-const RouteSwitch = () => {
+const App = () => {
   return (
     <BrowserRouter>
       <Header />
@@ -16,4 +16,4 @@ const RouteSwitch = () => {
   );
 };
 
-export default RouteSwitch;
+export default App;
