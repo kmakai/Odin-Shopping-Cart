@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+}
+
+header {
+  width: 100%;
+  background-color: lightgray;
+  height: 6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 3.4rem;
+}
+
+nav {
+  font-size: 2.4rem;
+  height: 100%;
+  width: 30rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+}
