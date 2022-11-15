@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React from 'react';
-import Home from './components/Home';
-import About from './components/About';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
 import Header from "./components/Header";
-import Shop from "./components/Shop"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Shop from "./pages/Shop";
 
 const App = () => {
   return (
