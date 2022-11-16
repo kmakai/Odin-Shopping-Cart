@@ -42,3 +42,50 @@ nav {
 nav a {
   text-decoration: none;
 }
+
+.container {
+  padding: 4rem;
+}
+
+/* Shop page styles */
+
+.shopcontainer {
+}
+
+.catagories {
+  display: flex;
+  gap: 2rem;
+}
+
+.products-display {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.product-card {
+  border: 1px red solid;
+  padding: 1rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.product-card img {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  gap: 1rem;
+}
+
+/* @media (max-width:  ) */
