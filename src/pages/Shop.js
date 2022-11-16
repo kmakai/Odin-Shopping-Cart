@@ -4,25 +4,34 @@ import { useContext } from "react";
 import ShopContext from "../context/ShopContext";
 
 const Shop = () => {
-  const { products } = useContext(ShopContext);
+  const { products, getProductsByCategory, getProducts } =
+    useContext(ShopContext);
 
   return (
     <div className="shopcontainer">
       <div className="catagories">
         <div className="catagory">
-          <button>All Prodcuts</button>
+          <button onClick={() => getProducts()}>All Products</button>
         </div>
         <div className="catagory">
-          <button>Men's Clothing</button>
+          <button onClick={() => getProductsByCategory("men's clothing")}>
+            Men's Clothing
+          </button>
         </div>
         <div className="catagory">
-          <button>Women's Clothing</button>
+          <button onClick={() => getProductsByCategory("women's clothing")}>
+            Women's Clothing
+          </button>
         </div>
         <div className="catagory">
-          <button>Jewelery</button>
+          <button onClick={() => getProductsByCategory("jewelery")}>
+            Jewelery
+          </button>
         </div>
         <div className="catagory">
-          <button>Electronics</button>
+          <button onClick={() => getProductsByCategory("electronics")}>
+            Electronics
+          </button>
         </div>
       </div>
       <div className="products-display">

@@ -50,15 +50,27 @@ nav a {
 /* Shop page styles */
 
 .shopcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .catagories {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  height: 4rem;
+  gap: 1rem;
+}
+
+.catagories button {
+  height: 100%;
+  padding: 0 2rem;
+  border: none;
 }
 
 .products-display {
-  width: 100%;
+  max-width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   gap: 2rem;
@@ -66,7 +78,7 @@ nav a {
 }
 
 .product-card {
-  border: 1px red solid;
+  border: 1px lightblue solid;
   padding: 1rem;
 
   display: flex;

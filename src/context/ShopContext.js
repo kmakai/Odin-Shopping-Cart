@@ -6,10 +6,15 @@ export const ShopProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [product, setProduct] = useState({});
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     getProducts();
   }, []);
+
+  useEffect(() => {
+    getCartCount();
+  }, [cart]);
 
   const getProducts = async () => {
     const response = await fetch(`https://fakestoreapi.com/products`);
@@ -18,22 +23,65 @@ export const ShopProvider = ({ children }) => {
     setProducts(data);
   };
 
-  const addToCart = (item) => {
-    const index = cart.findIndex((product) => {
-      +product.id === +item.id;
-    });
-    const exist = index < 0 ? false : true;
+  const getProductsByCategory = async (category) => {
+    const response = await fetch(
+      `https://fakestoreapi.com/products/category/${category}`
+    );
 
-    console.log(exist);
-    if (!exist) {
-      setCart([item, ...cart]);
+    const data = await response.json();
+    setProducts(data);
+  };
+
+  const getSingleProduct = async (id) => {
+    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+
+    const data = await response.json();
+
+    setProduct(data);
+  };
+
+  const addToCart = () => {
+    const id = product.id;
+    const NotInCart = cart.findIndex((item) => item.id === id) < 0;
+    console.log(id, NotInCart);
+
+    if (NotInCart) {
+      setCart([...cart, { ...product, count: 1 }]);
     } else {
-      console.log("item already exists");
+      const updatedCart = cart.map((item) => {
+        if (item.id === id) {
+          const newCount = item.count + 1;
+          return { ...item, count: newCount };
+        }
+
+        return item;
+      });
+
+      setCart(updatedCart);
     }
   };
 
+  const getCartCount = function () {
+    const count =
+      cart?.length > 0 ? cart.reduce((acc, it) => acc + it.count, 0) : 0;
+    setCartCount(count);
+  };
+
   return (
-    <ShopContext.Provider value={{ products, product, setProduct, addToCart }}>
+    <ShopContext.Provider
+      value={{
+        products,
+        product,
+        getSingleProduct,
+        getProducts,
+        getProductsByCategory,
+        setProduct,
+        addToCart,
+        cartCount,
+        setCartCount,
+        getCartCount,
+      }}
+    >
       {children}
     </ShopContext.Provider>
   );
