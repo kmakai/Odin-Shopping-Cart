@@ -13,14 +13,14 @@ const App = () => {
     <ShopProvider>
       <BrowserRouter>
         <Header />
-        <div className="container">
+        <main className="container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Shop/:id" element={<ProductPage />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </BrowserRouter>
     </ShopProvider>

@@ -74,12 +74,55 @@ footer {
   background-color: aliceblue;
 }
 
-footer h4 {
+footer h2 {
   font-size: 2rem;
 }
 
 footer p {
   font-size: 1.4rem;
+}
+
+/* HOME STYLES */
+.home {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.welcome-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.welcome-card #title {
+  margin-bottom: 2rem;
+}
+
+#title h1 {
+  font-size: 4rem;
+}
+
+#title p {
+  font-size: 2.4rem;
+  font-style: italic;
+}
+
+.para-checkout {
+  font-size: 2rem;
+}
+
+.image img {
+  height: 40rem;
+}
+
+.home button {
+  font-size: 1.6rem;
+  padding: 2rem;
+  border: none;
+  border-radius: 0.5rem;
 }
 
 /* Shop page styles */
