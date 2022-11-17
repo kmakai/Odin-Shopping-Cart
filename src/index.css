@@ -8,9 +8,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-}
-
 header {
   width: 100%;
   background-color: lightgray;
@@ -100,7 +97,17 @@ nav a {
   gap: 1rem;
 }
 
-/* @media (max-width:  ) */
+.product-info button {
+  border: none;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.product-info button > a {
+  text-decoration: none;
+  color: #000;
+}
+
 /* Product Page styles */
 .product-page {
   display: flex;
@@ -147,4 +154,61 @@ nav a {
   font-weight: bold;
   text-transform: uppercase;
   padding: 2rem;
+}
+
+/* CART PAGE STYLES */
+
+.cart-container {
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 4rem;
+  padding: 2rem 0;
+}
+
+.cart-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cart-card img {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.cart-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  gap: 1rem;
+}
+
+.cart-card-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cart-card-btns button {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: semi-bold;
+  border: none;
+}
+
+.checkout-btn {
+  padding: 1rem 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+}
+
+.checkout-total {
+  font-size: 2rem;
+  font-weight: bold;
 }

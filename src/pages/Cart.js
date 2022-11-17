@@ -1,17 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CartCard from "../components/CartCard";
 import ShopContext from "../context/ShopContext";
-
 function Cart() {
   const { cart } = useContext(ShopContext);
+  const [total, setTotal] = useState(0);
 
+  useEffect(() => {
+    setTotal(cart.reduce((acc, i) => acc + +i.price * +i.count, 0));
+  }, [cart]);
   return (
-    <div>
-      {/* {cart.map((item) => (
-        <CartCard item={item} />
-      ))} */}
-      {console.log(cart)}
-    </div>
+    <>
+      {cart.length === 0 ? (
+        <h1>CART IS EMPTY.....!</h1>
+      ) : (
+        <div className="checkout-total">Total: ${total.toFixed(2)}</div>
+      )}
+      <div className="cart-container">
+        {cart?.map((i) => (
+          <CartCard key={i.id} item={i} />
+        ))}
+      </div>
+      {cart.length > 0 && <button className="checkout-btn">CHECK OUT</button>}
+    </>
   );
 }
 

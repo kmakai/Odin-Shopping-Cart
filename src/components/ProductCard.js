@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ item, count = 3 }) => {
+const ProductCard = ({ item }) => {
   return (
     <div className="product-card">
       <img src={item.image} alt={item.title} />

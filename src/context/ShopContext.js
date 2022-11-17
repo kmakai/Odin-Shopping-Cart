@@ -72,6 +72,8 @@ export const ShopProvider = ({ children }) => {
       value={{
         products,
         product,
+        cart,
+        setCart,
         getSingleProduct,
         getProducts,
         getProductsByCategory,
