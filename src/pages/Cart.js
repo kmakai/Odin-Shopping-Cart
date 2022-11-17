@@ -11,7 +11,7 @@ function Cart() {
   return (
     <>
       {cart.length === 0 ? (
-        <h1>CART IS EMPTY.....!</h1>
+        <h1>Your cart is empty.....!</h1>
       ) : (
         <div className="checkout-total">Total: ${total.toFixed(2)}</div>
       )}

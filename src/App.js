@@ -6,6 +6,7 @@ import Cart from "./pages/Cart";
 import Shop from "./pages/Shop";
 import { ShopProvider } from "./context/ShopContext";
 import ProductPage from "./pages/ProductPage";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/Shop/:id" element={<ProductPage />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </ShopProvider>
   );
