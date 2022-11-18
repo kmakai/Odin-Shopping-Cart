@@ -8,9 +8,10 @@ const ProductCard = ({ item }) => {
       <div className="product-info">
         <h2 className="product-title">{item.title}</h2>
         <span className="product-price">${item.price}</span>
-        <button>
-          <Link to={`/shop/${item.id}`}>Buy Now</Link>
-        </button>
+
+        <Link to={`/shop/${item.id}`}>
+          <button>Buy Now</button>
+        </Link>
       </div>
     </div>
   );

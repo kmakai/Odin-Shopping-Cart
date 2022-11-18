@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import shopper from "../components/Assets/shopper.jpeg";
+import shopper from "../components/Assets/shopper.webp";
 
 function Home() {
   return (
@@ -18,9 +18,7 @@ function Home() {
           <button>SHOP NOW</button>
         </Link>
       </div>
-      <div className="image">
-        <img src={shopper}></img>
-      </div>
+      <img src={shopper}></img>
     </div>
   );
 }

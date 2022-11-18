@@ -10,7 +10,7 @@ function ProductPage() {
 
   useEffect(() => {
     getSingleProduct(param.id);
-  }, []);
+  }, [param.id]);
 
   return (
     <div className="product-page">

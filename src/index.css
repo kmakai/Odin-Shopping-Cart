@@ -23,7 +23,7 @@ body {
 
 header {
   width: 100%;
-  background-color: lightgray;
+  background-color: #1e293b;
   height: 6rem;
 
   display: flex;
@@ -34,7 +34,7 @@ header {
 
 h1 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   font-size: 3.4rem;
 }
@@ -51,11 +51,19 @@ nav {
 
 nav a {
   text-decoration: none;
+  color: #cbd5e1;
+  font-size: 2.5rem;
+  font-weight: semi-bold;
+}
+
+nav a:hover {
+  color: #fff;
 }
 
 .container {
-  padding-top: 2rem;
+  padding: 2rem;
   flex: 1;
+  background-color: #fff;
 }
 
 button:hover {
@@ -70,12 +78,13 @@ footer {
   justify-content: center;
   gap: 1rem;
   padding: 1rem 0;
-
-  background-color: aliceblue;
+  color: #cbd5e1;
+  background-color: #1e293b;
 }
 
 footer h2 {
   font-size: 2rem;
+  color: #fff;
 }
 
 footer p {
@@ -88,41 +97,58 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 4rem;
 }
 
 .welcome-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* align-items: flex-start; */
   gap: 4rem;
 }
 
 .welcome-card #title {
   margin-bottom: 2rem;
+  color: #1e293b;
+  border-bottom: 0.1rem solid #000;
+  padding-bottom: 2rem;
 }
 
 #title h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 #title p {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   font-style: italic;
+  text-transform: uppercase;
 }
 
 .para-checkout {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
-.image img {
-  height: 40rem;
+.home img {
+  width: 100%;
 }
 
 .home button {
   font-size: 1.6rem;
+  font-weight: bold;
   padding: 2rem;
   border: none;
   border-radius: 0.5rem;
+  width: 20rem;
+  color: #cbd5e1;
+  background-color: #1e293b;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.home button:hover {
+  background-color: #1e293bd8;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* Shop page styles */
@@ -143,8 +169,15 @@ footer p {
 
 .catagories button {
   height: 100%;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   border: none;
+  background-color: #1e293b;
+  color: #cbd5e1;
+  font-weight: bold;
+}
+
+.catagories button:hover {
+  color: #fff;
 }
 
 .products-display {
@@ -156,12 +189,13 @@ footer p {
 }
 
 .product-card {
-  border: 1px lightblue solid;
+  border: 0.1rem #2f323642 solid;
   padding: 1rem;
 
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.144);
 }
 
 .product-card img {
@@ -178,6 +212,11 @@ footer p {
   gap: 1rem;
 }
 
+.product-price {
+  font-size: 1.8rem;
+  font-weight: semi-bold;
+}
+
 .product-info button {
   border: none;
   font-size: 1.6rem;
@@ -189,12 +228,16 @@ footer p {
   color: #000;
 }
 
+.product-title {
+  border-bottom: 1px solid #000;
+}
+
 /* Product Page styles */
 .product-page {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+  margin: 2rem 4rem;
 }
 
 .product-page-card {
@@ -210,6 +253,7 @@ footer p {
 
 .product-page-title {
   font-size: 4rem;
+  border-bottom: 1px solid #000;
 }
 
 .product-page-info {
@@ -252,6 +296,12 @@ footer p {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+
+  border: 0.1rem #2f323642 solid;
+  padding: 1rem;
+
+  gap: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.144);
 }
 
 .cart-card img {
@@ -268,11 +318,20 @@ footer p {
   gap: 1rem;
 }
 
+.cart-card-price {
+  font-size: 2rem;
+}
+
+.cart-card-title {
+  border-bottom: 1px solid #000;
+}
+
 .cart-card-btns {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  font-size: 1.6rem;
 }
 
 .cart-card-btns button {
